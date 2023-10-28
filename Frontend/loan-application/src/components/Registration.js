@@ -49,11 +49,7 @@ function Registration() {
             return;
         }
 
-        if (!lastname.length < 1) {
-            setLastnameError('Last Name is required');
-            return;
-        }
-
+      
         if (!phoneNum || !phonePattern.test(phoneNum)) {
             setPhoneNumError('Please enter a valid 10-digit phone number');
             return;
