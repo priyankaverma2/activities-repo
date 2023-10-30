@@ -1,0 +1,5 @@
+create table customer(customer_id int primary key auto_increment,firstname varchar(15),lastname varchar(15),email_id varchar(20) unique,password varchar(15),phone bigint unique,pan varchar(20) unique)auto_increment=200;
+create table credit_score(pan varchar(20) primary key,score int);
+create table employee(employee_id int primary key auto_increment,employee_name varchar(20),email_id varchar(20),password varchar(15))auto_increment=500;
+create table loan(loan_id int primary key auto_increment,loan_type varchar(15))auto_increment=300;
+create table loan_application(application_id int primary key auto_increment,status varchar(10),customer_id int,foreign key(customer_id) references customer(customer_id),loan_id int,foreign key(loan_id) references loan(loan_id))auto_increment=400;
